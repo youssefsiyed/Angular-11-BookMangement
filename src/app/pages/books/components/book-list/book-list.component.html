@@ -1,0 +1,52 @@
+<div class="container mt-4">
+  <div class="container mt-2 mb-4">
+    <h1 class="h1_book-title text-white">📜 All Books Category</h1>
+    <br>
+    <div class="container div_book-container">
+      <div class="div_book-content" *ngFor="let categorie of categories">
+        <img [src]="categorie.img" class="img_category_book" (click)="onSelectCategorie(categorie.id)">
+        <p class="p_category_book">{{categorie.name}}</p>
+      </div>
+    </div>
+    <br>
+  </div>
+  <div class="container mt-2 mb-4" *ngIf="showSearchText === true">
+    <h1 class="h1_book-title text-white">🔍 Search for a Books</h1>
+    <input type="text" class="form-control form_book-title"
+    name="searchBook"
+    [(ngModel)]="searchBook"
+    placeholder="🔍 searching for a book .." autofocus>
+    <br>
+  </div>
+
+
+<div class="container">
+<h1 class="h1_book-title text-white">📚 All The Books</h1>
+<br>
+<div class="list_book-container">
+  <div class="card_list_book" *ngFor="let book of books | searchFilter: searchBook" style="width: 350px;height: 280px">
+    <img [src]="book.img" class="card_img_book" (click)="onSelectDetailBook(book)">
+    <h5 class="card-title_book">✏️&nbsp;{{book?.title}}</h5>
+
+    <div class="card_list_star">
+      <i class="fa fa-star"></i><span>&nbsp;{{book.rating}} stars</span>
+      <br>
+      <span><i class="fa fa-usd"></i>&nbsp;{{book.price}},00</span>
+    </div>
+    <p class="card_list_desc">✍️&nbsp;{{book?.description}}</p>
+
+    <div class="card_list_cart">
+      <i class="fa fa-shopping-basket" (click)="onSelectedCartBook(book)"></i>
+    </div>
+    <div class="card_list_heart">
+      <i class="fa fa-heart" (click)="onSelectedFavorieBook(book)"></i>
+    </div>
+    
+  </div>
+</div>
+<button class="card_list_showMore" *ngIf="!(limitBook>3)" (click)="onSelectedShowMore()">➕ Show More ..</button>
+</div>
+
+
+<app-book-modal *ngIf="showBookModal" [book]="book" (closeBookModal)="onHideBookModal($event)"></app-book-modal>
+</div>

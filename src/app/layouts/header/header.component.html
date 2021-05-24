@@ -1,0 +1,9 @@
+<nav class="header_container">
+    <img src="../../../assets/images/header/reading-book.svg" class="header_img" (click)="onNavigateToHome()">
+  <ul class="header_list-content">
+      <li class="header_list-element"><i class="fa fa-book fa_style"(click)="onNavigateToBookList()"></i>&nbsp;</li>
+      <li class="header_list-element"><i class="fa fa-heart fa_style" aria-hidden="true"></i>&nbsp;{{booksListFav?.length}}</li>
+      <li class="header_list-element"><i class="fa fa-shopping-basket fa_style" aria-hidden="true"></i>&nbsp;{{booksListCart?.length}}</li>
+      <li class="header_list-element"><i class="fa fa-user fa_style" aria-hidden="true"></i>&nbsp;Login</li>
+  </ul>
+</nav>

@@ -1,0 +1,148 @@
+{
+    "books": [
+      { 
+        "id": 1,
+        "title": "Atomic Habits",
+        "popularity":true,
+        "img":"https://mylibrairie.ma/11243-large_default/atomic-habits-an-easy-proven-way-to-build-good-habits-break-bad-ones-james-clear-.jpg",
+        "price":400,
+        "description":"No matter your goals, Atomic Habits offers a proven framework for improving--every day. James Clear, one of the world's leading experts on habit formation, reveals practical strategies that will teach you exactly how to form good habits",
+        "quantity": 20,
+        "rating": 5,
+        "date": "07/05/2021",
+        "authorId": 1,
+        "categorieId": 3
+    },
+    { 
+        "id": 2,
+        "title": "The power of your subconscious",
+        "popularity":true,
+        "img":"https://mylibrairie.ma/9987-large_default/the-power-of-your-subconscious-mind.jpg",
+        "price":400,
+        "description":"Includes never-before-published commentary from the author The Power of Your Subconscious Mind introduces and explains the mind-focusing techniques that remove the subconscious obstacles",
+        "quantity": 10,
+        "rating": 3,
+        "date": "07/05/2021",
+        "authorId": 2,
+        "categorieId": 1
+    },
+    { 
+        "id": 3,
+        "title": "Ego is the enemy the fight",
+        "popularity":true,
+        "img":"https://mylibrairie.ma/12134-large_default/ego-is-the-enemy-the-fight-to-master-our-greatest-opponent-ryan-holiday.jpg",
+        "price":400,
+        "description":"It's wrecked the careers of promising young geniuses. It's evaporated great fortunes and run companies into the ground. It's made adversity unbearable and turned struggle into shame",
+        "quantity": 10,
+        "rating": 4,
+        "date": "07/05/2021",
+        "authorId": 3,
+        "categorieId": 2
+    },
+    { 
+        "id": 4,
+        "title": "Rich Dad Poor Dad",
+        "popularity":true,
+        "img":"https://mylibrairie.ma/12129-large_default/rich-dad-poor-dad-what-the-rich-teach-their-kids-about-money-that-the-poor-and-middle-class-do-not.jpg",
+        "price":400,
+        "description":"It's evaporated great fortunes and run companies into the ground. It's made adversity unbearable and turned struggle into shame",
+        "quantity": 10,
+        "rating": 2,
+        "date": "07/05/2021",
+        "authorId": 4,
+        "categorieId": 1
+    },
+    { 
+        "id": 5,
+        "title": "Sparks of Phoenix",
+        "popularity":true,
+        "img":"https://mylibrairie.ma/11249-large_default/sparks-of-phoenix-najwa-zebian.jpg",
+        "price":400,
+        "description":"As the phoenix emerges from its ashes, Zebian emerges ablaze in these pages, not only as a survivor of abuse, but as a teacher and healer for all those who have struggled to understand, reclaim, and rise above a history of pain.",
+        "quantity": 10,
+        "rating": 2,
+        "date": "07/05/2021",
+        "authorId": 5,
+        "categorieId": 2
+    },
+    { 
+        "id": 6,
+        "title": "Macarons & Gourmandises",
+        "popularity":false,
+        "img":"https://mylibrairie.ma/4490-large_default/macarons-gourmandises-.jpg",
+        "price":400,
+        "description":"As the phoenix emerges from its ashes, Zebian emerges ablaze in these pages, not only as a survivor of abuse, but as a teacher and healer for all those who have struggled to understand, reclaim, and rise above a history of pain.",
+        "quantity": 10,
+        "rating": 2,
+        "date": "07/05/2021",
+        "authorId": 5,
+        "categorieId": 4
+    },
+    { 
+        "id": 7,
+        "title": "Cuisine pour diabétiques",
+        "popularity":false,
+        "img":"https://mylibrairie.ma/4498-large_default/cuisine-pour-diabetiques.jpg",
+        "price":400,
+        "description":"Les carottes sont donc loin d'être interdites dans un régime de diabète de type 2. De fait, elles ne contiennent que 5% de glucides et ont leur place dans l'alimentation adaptée au diabète de type 2",
+        "quantity": 10,
+        "rating": 2,
+        "date": "07/05/2021",
+        "authorId": 6,
+        "categorieId": 4
+    }
+    ],
+    "authors": [
+    {
+      "id":1,
+      "fullName": "James Clear"
+    },
+    {
+        "id":2,
+        "fullName": "James Murphy"
+    },
+    {
+        "id":3,
+        "fullName": "Ryan Holiday"
+    },
+    {
+        "id":4,
+        "fullName": "Roman Vallery"
+    },
+    {
+        "id":5,
+        "fullName": "Najwa Zebian’s"
+    },
+    {
+        "id":6,
+        "fullName": "Nicole du boin"
+    }
+    ],
+    "catogories": [
+        {
+            "id":0,
+            "name": "All Books",
+            "img": "../../../../../assets/images/api/book.svg"
+        },
+        {
+          "id":1,
+          "name": "Motivation Book",
+          "img": "../../../../../assets/images/api/motivate.svg"
+        },
+        {
+            "id":2,
+            "name": "Documantary Book",
+            "img": "../../../../../assets/images/api/mental.svg"
+        },
+        {
+            "id":3,
+            "name": "Creativity Book",
+            "img": "../../../../../assets/images/api/creativity.svg"
+        },
+        {
+            "id":4,
+            "name": "Cooking Book",
+            "img": "../../../../../assets/images/api/bake.svg"
+        }
+        ]
+}

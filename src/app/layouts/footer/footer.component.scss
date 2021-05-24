@@ -1,0 +1,21 @@
+.footer_container {
+    position: relative;
+}
+.footer_waves-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    background: none;
+    left: 40%;
+    top: 60%;
+}
+.footer_waves-content p {
+    background: none;
+    font-size: 1.4rem;
+}
+// .footer_waves {
+//     position: absolute;
+// }

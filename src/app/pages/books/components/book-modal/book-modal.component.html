@@ -1,0 +1,17 @@
+<div  class="book-modal">
+  <div class="book-modal-content">
+    <span class="book-close" (click)="onClickCloseBookModal()">&times;</span>
+    <div class="container">
+      <h2 class="h1_book-title text-white text-center">📚 Book Detail :</h2>
+      <br>
+      <div class="container" *ngIf="book">
+        <p>{{book?.title}}</p>
+        <p>{{book?.description}}</p>
+        <p>{{book?.price}}</p>
+        <p>{{book?.quantity}}</p>
+        <p>{{book?.rating}}</p>
+        <p>{{book?.date}}</p>
+        <p>{{author?.fullName}}</p>
+      </div>
+  </div>
+</div>
