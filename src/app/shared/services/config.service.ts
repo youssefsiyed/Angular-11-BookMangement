@@ -23,7 +23,16 @@ public addBookToFavItem(item: any) {
     localStorage.setItem('books_fav',JSON.stringify(booksFav));
     this.bookFavList.next(booksFav);
   }
- 
+}
+
+public removeBookToFavItem(id: number) {
+  // @ts-ignore
+  let booksFav= JSON.parse(localStorage.getItem('books_fav')) || [];
+  if(booksFav){
+    let books =booksFav.filter((book:any) => book.id != id)
+    localStorage.setItem('books_fav',JSON.stringify(books));
+    this.bookFavList.next(books);
+  }
 }
 
 public addBookToCartItem(item: any){

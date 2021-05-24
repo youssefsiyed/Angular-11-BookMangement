@@ -81,15 +81,17 @@ export class BookListComponent implements OnInit {
 
   onSelectedFavorieBook(book: Book){
     if(book) {
-      this.config.addBookToFavItem(book);
-      confirm(`📙 the ${book.title} is add to you're 💗 book favorites`);
+      if(confirm(`📙 the ${book.title} is add to you're 💗 book favorites`)){
+        this.config.addBookToFavItem(book);
+      }
     }
   }
 
   onSelectedCartBook(book: Book){
     if(book) {
-      this.config.addBookToCartItem(book);
-      confirm(`📙 the ${book.title} is add to you're 🛒 book carts`);
+      if(confirm(`📙 the ${book.title} is add to you're 🛒 book carts`)){
+        this.config.addBookToCartItem(book);
+      }
     }
   }
 

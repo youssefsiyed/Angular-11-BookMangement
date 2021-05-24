@@ -1,3 +1,21 @@
-<p>
-  book-favorite works!
-</p>
+<div class="container">
+  <h1 class="h1_fav-book-title text-white">💗 All you're Favorite Books</h1>
+  <br>
+    <div class="div_bookFav-container" *ngIf="booksListFav?.length;else emptyBooks">
+      <div class="card_list_book" *ngFor="let book of booksListFav" style="width: 360px;height: 360px">
+        <img [src]="book.img" class="card_img_book">
+        <h5 class="card-title_book">✏️&nbsp;{{book?.title}}</h5>
+        <p class="card_list_desc">✍️&nbsp;{{book?.description}}</p>
+
+        <span class="card_list-remove" (click)="onRemoveBookFav(book.id)"><i class="fa fa-trash"></i></span>
+      </div>
+    </div>
+
+  <ng-template #emptyBooks>.
+    <div class="container book_empty-container">
+      <h1 class="h2_fav-book-title text-white">😢 The List of Books is Empty</h1>
+      <button type="button" class="empty-btn-navigation" (click)="onNavigateToListBooks()">Go back to Books</button>
+    </div>
+  </ng-template>
+
+</div>

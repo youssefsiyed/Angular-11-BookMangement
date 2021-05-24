@@ -25,5 +25,10 @@ export class HeaderComponent implements OnInit {
 
   onNavigateToBookList() {
     return this.router.navigate(['/books']);
-   }
+  }
+
+  onNavigateToBookFavList() {
+    return this.router.navigate(['/favorites']);
+  }
+  
 }
