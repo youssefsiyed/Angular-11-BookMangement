@@ -1,0 +1,63 @@
+.h1_shopping-book-title {
+	text-align: center;
+	margin: 1rem 0rem;
+	font-size: 2rem;
+    color: white;
+}
+.h2_shopping-book-title {
+	text-align: right;
+    margin: 2rem 3rem 1rem 0rem;
+    font-size: 1.5rem;
+    color: white;
+}
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    background: none;
+}
+.book-cart-img {
+    width: 15%;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 2px 25px 0 rgb(0 0 0 / 30%);
+}
+
+.book-cart-text {
+    font-size: 1rem;
+    color: white;
+    width: 15%;
+    text-align: center;
+}
+.book-cart-desc {
+    color: white;
+    background: none;
+    width: 300px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.h2_fav-book-title {
+	text-align: center;
+	margin: 1rem 0rem;
+	font-size: 1.4rem;
+}
+.empty-btn-navigation{
+    width: 25%;
+    margin: 1rem 0rem;
+    padding: 1rem 3rem 1rem 3rem;
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    text-align: center;
+    box-shadow: 0 2px 25px 0 rgb(0 0 0 / 30%);
+}
+
+.book_empty-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

@@ -39,7 +39,17 @@ public addBookToCartItem(item: any){
   // @ts-ignore
   let booksCart = JSON.parse(localStorage.getItem('books_cart')) || [];
     booksCart.push(item);
+    localStorage.setItem('books_cart',JSON.stringify(booksCart));
     this.bookCartList.next(booksCart);
-    localStorage.setItem('books_cart',booksCart);
+}
+
+public removeBookToCartItem(id: number) {
+  // @ts-ignore
+  let booksCart= JSON.parse(localStorage.getItem('books_cart')) || [];
+  if(booksCart){
+    let books =booksCart.filter((book:any) => book.id != id)
+    localStorage.setItem('books_cart',JSON.stringify(books));
+    this.bookCartList.next(books);
+  }
 }
 }
