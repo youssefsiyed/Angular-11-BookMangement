@@ -31,4 +31,7 @@ export class HeaderComponent implements OnInit {
     return this.router.navigate(['/favorites']);
   }
   
+  onNavigateToBookCartList() {
+    return this.router.navigate(['/shopping']);
+  }
 }
