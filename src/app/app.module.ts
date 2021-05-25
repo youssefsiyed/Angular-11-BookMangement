@@ -7,6 +7,7 @@ import { LayoutsModule } from './layouts/layouts.module';
 import { BooksModule } from './pages/books/books.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { UsersModule } from './pages/users/users.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     AppRoutingModule,
     LayoutsModule,
-    BooksModule
+    BooksModule,
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]

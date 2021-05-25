@@ -6,6 +6,7 @@ import { Observable ,of, pipe  } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Categorie } from '../models/categorie';
 import { Author } from '../models/author';
+import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -32,6 +33,10 @@ getAllCategories(): Observable<Categorie[]> {
 
 getAuthorsById(id :number): Observable<Author> {
   return this.http.get<Author>(`${environment.BASE_URL}/authors/${id}`);
+}
+
+getUserByUsrnameAndPwd(username: string,password:string): Observable<User[]> {
+  return this.http.get<User[]>(`${environment.BASE_URL}/users?username=${username}&password=${password}`);
 }
 
 }

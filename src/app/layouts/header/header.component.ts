@@ -11,12 +11,15 @@ export class HeaderComponent implements OnInit {
   
   booksListFav: string | any[] | null = [];
   booksListCart: string | any[] | null = [];
-
+  user :any;
   constructor(private router:Router, private config:ConfigService) { }
 
   ngOnInit() {
     this.config.currentBookFavList.subscribe(item => this.booksListFav = item);
     this.config.currentBookCartList.subscribe(item => this.booksListCart = item);
+    this.config.currentUser.subscribe(item => this.user = item);
+    console.log('current user: '+ JSON.stringify(this.user?.username))
+    
   }
 
   onNavigateToHome() {
@@ -33,5 +36,13 @@ export class HeaderComponent implements OnInit {
   
   onNavigateToBookCartList() {
     return this.router.navigate(['/shopping']);
+  }
+
+  onNavigateToLogin() {
+    return this.router.navigate(['/users/login']);
+  }
+
+  onNavigateToLogOut(){
+    this.config.logout();
   }
 }

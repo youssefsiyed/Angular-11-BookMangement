@@ -144,5 +144,14 @@
             "name": "Cooking Book",
             "img": "../../../../../assets/images/api/bake.svg"
         }
-        ]
+    ],
+    "users": [
+        {   "id":1,
+            "username": "Admin",
+            "password": "Admin",
+            "firstName": "Yassine",
+            "lastName": "Jamali",
+            "token": ""
+        }
+    ]
 }

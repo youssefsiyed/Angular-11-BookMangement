@@ -8,6 +8,10 @@ const routes: Routes = [{
 {
   path: 'books',
   loadChildren: () => import('./pages/books/books.module').then(m => m.BooksModule)
+},
+{
+  path: 'users',
+  loadChildren: () => import('./pages/users/users.module').then(m => m.UsersModule)
 }];
 
 @NgModule({

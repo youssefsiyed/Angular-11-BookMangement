@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="login-container-flex">
+    <h1 class="login-title">🔒</h1>
+  </div>
+
+  <div class="login-container-form">
+    <form class="login-form"  name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm">
+      <div class="form-group login-form-style">
+        <label class="label-form-group">User Name</label>
+        <input type="text" name="userName" class="form-control login-form-control"
+        [(ngModel)]="user.username" #userName="ngModel"
+        [ngClass]="{ 'is-invalid': f.submitted && userName.invalid }" required>
+        <div *ngIf="f.submitted && userName.invalid" class="invalid-feedback bg-none">
+            <div *ngIf="userName?.errors?.required" class="login-invalid-feedback">User Name is required</div>
+        </div>
+      </div>  
+      <div class="form-group">
+        <label class="label-form-group">Password</label>
+        <input type="password" name="password" class="form-control login-form-control"
+        [(ngModel)]="user.password" #password="ngModel"
+        [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required>
+        <div *ngIf="f.submitted && password.invalid" class="invalid-feedback bg-none">
+            <div *ngIf="password?.errors?.required" class="login-invalid-feedback">Password is required</div>
+        </div>
+      </div>
+      <div class="form-group login-btn-container">
+          <button class="login-btn">Login</button>
+          <a routerLink="/register" class="btn btn-link">Register</a>
+      </div>
+  </form>
+  </div>
+</div>

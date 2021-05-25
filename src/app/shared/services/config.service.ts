@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
+import { User } from '../models/user';
+import { ApiService } from './api.service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +16,16 @@ currentBookFavList = this.bookFavList.asObservable();
 bookCartList = new BehaviorSubject(JSON.parse(localStorage.getItem('books_cart')) || []) ;
 currentBookCartList = this.bookCartList.asObservable();
 
-constructor() { }
+user = new BehaviorSubject<User>({
+  username: '',
+  password: '',
+  firstName: '',
+  lastName: '',
+  token: '',
+});
+currentUser = this.user.asObservable();
+
+constructor(private api: ApiService ,private router:Router) { }
 
 public addBookToFavItem(item: any) {
   // @ts-ignore
@@ -51,5 +63,34 @@ public removeBookToCartItem(id: number) {
     localStorage.setItem('books_cart',JSON.stringify(books));
     this.bookCartList.next(books);
   }
+}
+
+public login(username: string, password: string){
+  if(username != "" && password != ""){
+    this.api.getUserByUsrnameAndPwd(username,password).subscribe(
+      (res) => {
+        if(res.length <= 0){
+          alert('😢 the user is Not found !!');
+          return;
+        }
+        this.user.next(res[0]);
+        this.router.navigate(['/home']);
+      },
+      (error) => console.log('ERROR: ' + error)
+    );
+  }
+}
+
+public logout(){
+  if(confirm('🔐 do you want to logout from the app !')){
+    this.user.next({
+      username: '',
+      password: '',
+      firstName: '',
+      lastName: '',
+      token: '',
+    });
+  }
+ 
 }
 }
